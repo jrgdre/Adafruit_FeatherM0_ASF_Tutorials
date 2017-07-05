@@ -7,6 +7,8 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "01_Blink", "01_Blink\01_Bli
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "02_RS232", "02_RS232\02_RS232.cproj", "{C7E2408D-FD88-44E8-9425-51D3298BB679}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "03_Button", "03_Button\03_Button.cproj", "{53F14642-D918-4438-89F8-742D09384B7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -21,6 +23,10 @@ Global
 		{C7E2408D-FD88-44E8-9425-51D3298BB679}.Debug|ARM.Build.0 = Debug|ARM
 		{C7E2408D-FD88-44E8-9425-51D3298BB679}.Release|ARM.ActiveCfg = Release|ARM
 		{C7E2408D-FD88-44E8-9425-51D3298BB679}.Release|ARM.Build.0 = Release|ARM
+		{53F14642-D918-4438-89F8-742D09384B7D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{53F14642-D918-4438-89F8-742D09384B7D}.Debug|ARM.Build.0 = Debug|ARM
+		{53F14642-D918-4438-89F8-742D09384B7D}.Release|ARM.ActiveCfg = Release|ARM
+		{53F14642-D918-4438-89F8-742D09384B7D}.Release|ARM.Build.0 = Release|ARM
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
