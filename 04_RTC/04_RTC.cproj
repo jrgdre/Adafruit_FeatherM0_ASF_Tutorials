@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
-    <ProjectGuid>{53f14642-d918-4438-89f8-742d09384b7d}</ProjectGuid>
+    <ProjectGuid>{2ae3e1b0-df25-4e67-9793-a113b2c6518f}</ProjectGuid>
     <avrdevice>ATSAMD21G18A</avrdevice>
     <avrdeviceseries>samd21</avrdeviceseries>
     <OutputType>Executable</OutputType>
@@ -12,9 +12,9 @@
     <OutputFileName>$(MSBuildProjectName)</OutputFileName>
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <AssemblyName>03_Button</AssemblyName>
-    <Name>03_Button</Name>
-    <RootNamespace>03_Button</RootNamespace>
+    <AssemblyName>04_RTC</AssemblyName>
+    <Name>04_RTC</Name>
+    <RootNamespace>04_RTC</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
@@ -30,12 +30,11 @@
       <framework-data>
         <options>
           <option id="common.boards" value="Add" config="" content-id="Atmel.ASF" />
-          <option id="sam0.drivers.extint" value="Add" config="callback" content-id="Atmel.ASF" />
-          <option id="sam0.drivers.port" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="sam0.drivers.rtc" value="Add" config="count_callback" content-id="Atmel.ASF" />
           <option id="sam0.drivers.sercom.usart" value="Add" config="callback" content-id="Atmel.ASF" />
           <option id="sam0.drivers.system" value="Add" config="" content-id="Atmel.ASF" />
           <option id="sam0.utils.stdio.stdio_serial" value="Add" config="" content-id="Atmel.ASF" />
-          <option id="common2.services.delay" value="Add" config="systick" content-id="Atmel.ASF" />
+          <option id="sam0.drivers.port" value="Add" config="" content-id="Atmel.ASF" />
           <option id="sam0.utils.linker_scripts" value="Add" config="" content-id="Atmel.ASF" />
         </options>
         <configurations />
@@ -202,17 +201,14 @@
           <file path="src/ASF/thirdparty/CMSIS/Lib/license.txt" framework="" version="" source="thirdparty/CMSIS/Lib/license.txt" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/thirdparty/CMSIS/README.txt" framework="" version="" source="thirdparty/CMSIS/README.txt" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/thirdparty/CMSIS/license.txt" framework="" version="" source="thirdparty/CMSIS/license.txt" changed="False" content-id="Atmel.ASF" />
-          <file path="src/ASF/sam0/drivers/port/port.c" framework="" version="3.34.2" source="sam0\drivers\port\port.c" changed="False" content-id="Atmel.ASF" />
-          <file path="src/ASF/sam0/drivers/port/quick_start/qs_port_basic.h" framework="" version="3.34.2" source="sam0\drivers\port\quick_start\qs_port_basic.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/ASF/sam0/drivers/port/port.h" framework="" version="3.34.2" source="sam0\drivers\port\port.h" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/sam0/utils/stdio/stdio_serial/stdio_serial.h" framework="" version="3.34.2" source="sam0\utils\stdio\stdio_serial\stdio_serial.h" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/common/services/serial/sam0_usart/usart_serial.h" framework="" version="3.34.2" source="common\services\serial\sam0_usart\usart_serial.h" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/common/services/serial/serial.h" framework="" version="3.34.2" source="common\services\serial\serial.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/ASF/sam0/drivers/extint/extint_callback.c" framework="" version="3.34.2" source="sam0\drivers\extint\extint_callback.c" changed="False" content-id="Atmel.ASF" />
-          <file path="src/ASF/sam0/drivers/extint/extint_callback.h" framework="" version="3.34.2" source="sam0\drivers\extint\extint_callback.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/ASF/sam0/drivers/extint/extint.h" framework="" version="3.34.2" source="sam0\drivers\extint\extint.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/Config/conf_extint.h" framework="" version="3.34.2" source="sam0\drivers\extint\module_config\conf_extint.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.c" framework="" version="3.34.2" source="sam0\drivers\extint\extint_sam_d_r_h\extint.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/rtc/rtc_count.h" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_count.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/rtc/rtc_count_interrupt.h" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_count_interrupt.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/rtc/rtc_tamper.h" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_tamper.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h/rtc_count.c" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h/rtc_count_interrupt.c" framework="" version="3.34.2" source="sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count_interrupt.c" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/sam0/drivers/sercom/sercom_interrupt.c" framework="" version="3.34.2" source="sam0\drivers\sercom\sercom_interrupt.c" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/sam0/drivers/sercom/sercom.c" framework="" version="3.34.2" source="sam0\drivers\sercom\sercom.c" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/sam0/drivers/sercom/sercom_interrupt.h" framework="" version="3.34.2" source="sam0\drivers\sercom\sercom_interrupt.h" changed="False" content-id="Atmel.ASF" />
@@ -228,9 +224,9 @@
           <file path="src/ASF/sam0/drivers/sercom/usart/quick_start_dma/qs_usart_dma_use.h" framework="" version="3.34.2" source="sam0\drivers\sercom\usart\quick_start_dma\qs_usart_dma_use.h" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/sam0/utils/stdio/read.c" framework="" version="3.34.2" source="sam0\utils\stdio\read.c" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/sam0/utils/stdio/write.c" framework="" version="3.34.2" source="sam0\utils\stdio\write.c" changed="False" content-id="Atmel.ASF" />
-          <file path="src/ASF/common2/services/delay/sam0/systick_counter.c" framework="" version="3.34.2" source="common2\services\delay\sam0\systick_counter.c" changed="False" content-id="Atmel.ASF" />
-          <file path="src/ASF/common2/services/delay/delay.h" framework="" version="3.34.2" source="common2\services\delay\delay.h" changed="False" content-id="Atmel.ASF" />
-          <file path="src/ASF/common2/services/delay/sam0/systick_counter.h" framework="" version="3.34.2" source="common2\services\delay\sam0\systick_counter.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/port/port.c" framework="" version="3.34.2" source="sam0\drivers\port\port.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/port/quick_start/qs_port_basic.h" framework="" version="3.34.2" source="sam0\drivers\port\quick_start\qs_port_basic.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/port/port.h" framework="" version="3.34.2" source="sam0\drivers\port\port.h" changed="False" content-id="Atmel.ASF" />
         </files>
         <documentation help="http://asf.atmel.com/docs/3.34.2/common.applications.user_application.sam0_system.user_board.atsamd21g18a/html/index.html" />
         <offline-documentation help="" />
@@ -271,9 +267,8 @@
       <Value>NDEBUG</Value>
       <Value>BOARD=USER_BOARD</Value>
       <Value>ARM_MATH_CM0PLUS=true</Value>
-      <Value>EXTINT_CALLBACK_MODE=true</Value>
+      <Value>RTC_COUNT_ASYNC=true</Value>
       <Value>USART_CALLBACK_MODE=true</Value>
-      <Value>SYSTICK_MODE</Value>
     </ListValues>
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
@@ -300,15 +295,13 @@
       <Value>../src/ASF/common2/boards/user_board</Value>
       <Value>../src</Value>
       <Value>../src/config</Value>
-      <Value>../src/ASF/sam0/drivers/port</Value>
       <Value>../src/ASF/sam0/utils/stdio/stdio_serial</Value>
       <Value>../src/ASF/common/services/serial</Value>
-      <Value>../src/ASF/sam0/drivers/extint</Value>
-      <Value>../src/ASF/sam0/drivers/extint/extint_sam_d_r_h</Value>
+      <Value>../src/ASF/sam0/drivers/rtc</Value>
+      <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h</Value>
       <Value>../src/ASF/sam0/drivers/sercom</Value>
       <Value>../src/ASF/sam0/drivers/sercom/usart</Value>
-      <Value>../src/ASF/common2/services/delay</Value>
-      <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/sam0/drivers/port</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
@@ -354,18 +347,16 @@
       <Value>../src/ASF/common2/boards/user_board</Value>
       <Value>../src</Value>
       <Value>../src/config</Value>
-      <Value>../src/ASF/sam0/drivers/port</Value>
       <Value>../src/ASF/sam0/utils/stdio/stdio_serial</Value>
       <Value>../src/ASF/common/services/serial</Value>
-      <Value>../src/ASF/sam0/drivers/extint</Value>
-      <Value>../src/ASF/sam0/drivers/extint/extint_sam_d_r_h</Value>
+      <Value>../src/ASF/sam0/drivers/rtc</Value>
+      <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h</Value>
       <Value>../src/ASF/sam0/drivers/sercom</Value>
       <Value>../src/ASF/sam0/drivers/sercom/usart</Value>
-      <Value>../src/ASF/common2/services/delay</Value>
-      <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/sam0/drivers/port</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
-  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=USER_BOARD -DEXTINT_CALLBACK_MODE=true -DUSART_CALLBACK_MODE=true -DSYSTICK_MODE</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=USER_BOARD -DRTC_COUNT_ASYNC=true -DUSART_CALLBACK_MODE=true</armgcc.preprocessingassembler.general.AssemblerFlags>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>../src/ASF/common/boards</Value>
@@ -390,15 +381,13 @@
       <Value>../src/ASF/common2/boards/user_board</Value>
       <Value>../src</Value>
       <Value>../src/config</Value>
-      <Value>../src/ASF/sam0/drivers/port</Value>
       <Value>../src/ASF/sam0/utils/stdio/stdio_serial</Value>
       <Value>../src/ASF/common/services/serial</Value>
-      <Value>../src/ASF/sam0/drivers/extint</Value>
-      <Value>../src/ASF/sam0/drivers/extint/extint_sam_d_r_h</Value>
+      <Value>../src/ASF/sam0/drivers/rtc</Value>
+      <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h</Value>
       <Value>../src/ASF/sam0/drivers/sercom</Value>
       <Value>../src/ASF/sam0/drivers/sercom/usart</Value>
-      <Value>../src/ASF/common2/services/delay</Value>
-      <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/sam0/drivers/port</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
 </ArmGcc>
@@ -417,9 +406,8 @@
       <Value>DEBUG</Value>
       <Value>BOARD=USER_BOARD</Value>
       <Value>ARM_MATH_CM0PLUS=true</Value>
-      <Value>EXTINT_CALLBACK_MODE=true</Value>
+      <Value>RTC_COUNT_ASYNC=true</Value>
       <Value>USART_CALLBACK_MODE=true</Value>
-      <Value>SYSTICK_MODE</Value>
     </ListValues>
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
@@ -446,16 +434,14 @@
       <Value>../src/ASF/common2/boards/user_board</Value>
       <Value>../src</Value>
       <Value>../src/config</Value>
-      <Value>../src/ASF/sam0/drivers/port</Value>
       <Value>../src/ASF/sam0/utils/stdio/stdio_serial</Value>
       <Value>../src/ASF/common/services/serial</Value>
-      <Value>../src/ASF/sam0/drivers/extint</Value>
-      <Value>../src/ASF/sam0/drivers/extint/extint_sam_d_r_h</Value>
+      <Value>../src/ASF/sam0/drivers/rtc</Value>
+      <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h</Value>
       <Value>../src/ASF/sam0/drivers/sercom</Value>
       <Value>../src/ASF/sam0/drivers/sercom/usart</Value>
       <Value>../..</Value>
-      <Value>../src/ASF/common2/services/delay</Value>
-      <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/sam0/drivers/port</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -503,19 +489,17 @@
       <Value>../src/ASF/common2/boards/user_board</Value>
       <Value>../src</Value>
       <Value>../src/config</Value>
-      <Value>../src/ASF/sam0/drivers/port</Value>
       <Value>../src/ASF/sam0/utils/stdio/stdio_serial</Value>
       <Value>../src/ASF/common/services/serial</Value>
-      <Value>../src/ASF/sam0/drivers/extint</Value>
-      <Value>../src/ASF/sam0/drivers/extint/extint_sam_d_r_h</Value>
+      <Value>../src/ASF/sam0/drivers/rtc</Value>
+      <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h</Value>
       <Value>../src/ASF/sam0/drivers/sercom</Value>
       <Value>../src/ASF/sam0/drivers/sercom/usart</Value>
-      <Value>../src/ASF/common2/services/delay</Value>
-      <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/sam0/drivers/port</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
   <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
-  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=USER_BOARD -DEXTINT_CALLBACK_MODE=true -DUSART_CALLBACK_MODE=true -DSYSTICK_MODE</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=USER_BOARD -DRTC_COUNT_ASYNC=true -DUSART_CALLBACK_MODE=true</armgcc.preprocessingassembler.general.AssemblerFlags>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>../src/ASF/common/boards</Value>
@@ -540,15 +524,13 @@
       <Value>../src/ASF/common2/boards/user_board</Value>
       <Value>../src</Value>
       <Value>../src/config</Value>
-      <Value>../src/ASF/sam0/drivers/port</Value>
       <Value>../src/ASF/sam0/utils/stdio/stdio_serial</Value>
       <Value>../src/ASF/common/services/serial</Value>
-      <Value>../src/ASF/sam0/drivers/extint</Value>
-      <Value>../src/ASF/sam0/drivers/extint/extint_sam_d_r_h</Value>
+      <Value>../src/ASF/sam0/drivers/rtc</Value>
+      <Value>../src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h</Value>
       <Value>../src/ASF/sam0/drivers/sercom</Value>
       <Value>../src/ASF/sam0/drivers/sercom/usart</Value>
-      <Value>../src/ASF/common2/services/delay</Value>
-      <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/sam0/drivers/port</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
   <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
@@ -561,9 +543,6 @@
     <Folder Include="src\ASF\common2\" />
     <Folder Include="src\ASF\common2\boards\" />
     <Folder Include="src\ASF\common2\boards\user_board\" />
-    <Folder Include="src\ASF\common2\services\" />
-    <Folder Include="src\ASF\common2\services\delay\" />
-    <Folder Include="src\ASF\common2\services\delay\sam0\" />
     <Folder Include="src\ASF\common\" />
     <Folder Include="src\ASF\common\boards\" />
     <Folder Include="src\ASF\common\services\" />
@@ -573,10 +552,10 @@
     <Folder Include="src\ASF\common\utils\interrupt\" />
     <Folder Include="src\ASF\sam0\" />
     <Folder Include="src\ASF\sam0\drivers\" />
-    <Folder Include="src\ASF\sam0\drivers\extint\" />
-    <Folder Include="src\ASF\sam0\drivers\extint\extint_sam_d_r_h\" />
     <Folder Include="src\ASF\sam0\drivers\port\" />
     <Folder Include="src\ASF\sam0\drivers\port\quick_start\" />
+    <Folder Include="src\ASF\sam0\drivers\rtc\" />
+    <Folder Include="src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\" />
     <Folder Include="src\ASF\sam0\drivers\sercom\" />
     <Folder Include="src\ASF\sam0\drivers\sercom\usart\" />
     <Folder Include="src\ASF\sam0\drivers\sercom\usart\quick_start\" />
@@ -629,16 +608,19 @@
       <SubType>compile</SubType>
       <Link>Adafruit_FeatherM0_RS232.c</Link>
     </Compile>
-    <None Include="src\ASF\common2\services\delay\sam0\systick_counter.h">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\ASF\common2\services\delay\delay.h">
-      <SubType>compile</SubType>
-    </None>
-    <Compile Include="src\ASF\common2\services\delay\sam0\systick_counter.c">
+    <Compile Include="src\ASF\sam0\drivers\port\port.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\ASF\sam0\drivers\extint\extint_sam_d_r_h\extint.c">
+    <None Include="src\ASF\sam0\drivers\port\port.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam0\drivers\port\quick_start\qs_port_basic.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count_interrupt.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\ASF\sam0\drivers\sercom\sercom.c">
@@ -686,16 +668,13 @@
     <None Include="src\ASF\sam0\drivers\sercom\sercom_interrupt.h">
       <SubType>compile</SubType>
     </None>
-    <None Include="src\config\conf_extint.h">
+    <None Include="src\ASF\sam0\drivers\rtc\rtc_tamper.h">
       <SubType>compile</SubType>
     </None>
-    <None Include="src\ASF\sam0\drivers\extint\extint.h">
+    <None Include="src\ASF\sam0\drivers\rtc\rtc_count_interrupt.h">
       <SubType>compile</SubType>
     </None>
-    <Compile Include="src\ASF\sam0\drivers\extint\extint_callback.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <None Include="src\ASF\sam0\drivers\extint\extint_callback.h">
+    <None Include="src\ASF\sam0\drivers\rtc\rtc_count.h">
       <SubType>compile</SubType>
     </None>
     <None Include="src\ASF\common\services\serial\serial.h">
@@ -704,16 +683,7 @@
     <None Include="src\ASF\common\services\serial\sam0_usart\usart_serial.h">
       <SubType>compile</SubType>
     </None>
-    <Compile Include="src\ASF\sam0\drivers\port\port.c">
-      <SubType>compile</SubType>
-    </Compile>
     <None Include="src\ASF\sam0\utils\stdio\stdio_serial\stdio_serial.h">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\ASF\sam0\drivers\port\port.h">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="src\ASF\sam0\drivers\port\quick_start\qs_port_basic.h">
       <SubType>compile</SubType>
     </None>
     <None Include="src\asf.h">
