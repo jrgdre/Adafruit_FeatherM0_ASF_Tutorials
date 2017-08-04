@@ -11,6 +11,8 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "03_Button", "03_Button\03_B
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "04_RTC", "04_RTC\04_RTC.cproj", "{2AE3E1B0-DF25-4E67-9793-A113B2C6518F}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "05_ADC", "05_ADC\05_ADC.cproj", "{0DE8D972-8EFA-4BFB-A191-03EACDCAC086}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -33,6 +35,10 @@ Global
 		{2AE3E1B0-DF25-4E67-9793-A113B2C6518F}.Debug|ARM.Build.0 = Debug|ARM
 		{2AE3E1B0-DF25-4E67-9793-A113B2C6518F}.Release|ARM.ActiveCfg = Release|ARM
 		{2AE3E1B0-DF25-4E67-9793-A113B2C6518F}.Release|ARM.Build.0 = Release|ARM
+		{0DE8D972-8EFA-4BFB-A191-03EACDCAC086}.Debug|ARM.ActiveCfg = Debug|ARM
+		{0DE8D972-8EFA-4BFB-A191-03EACDCAC086}.Debug|ARM.Build.0 = Debug|ARM
+		{0DE8D972-8EFA-4BFB-A191-03EACDCAC086}.Release|ARM.ActiveCfg = Release|ARM
+		{0DE8D972-8EFA-4BFB-A191-03EACDCAC086}.Release|ARM.Build.0 = Release|ARM
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
