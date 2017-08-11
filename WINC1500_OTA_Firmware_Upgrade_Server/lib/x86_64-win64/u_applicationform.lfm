@@ -1,0 +1,85 @@
+object ApplicationForm: TApplicationForm
+  Left = 2737
+  Height = 240
+  Top = 386
+  Width = 434
+  Caption = 'Simple HTTP Server'
+  ClientHeight = 240
+  ClientWidth = 434
+  Position = poDesktopCenter
+  LCLVersion = '1.6.4.0'
+  object StaticText: TStaticText
+    Left = 0
+    Height = 17
+    Top = 30
+    Width = 434
+    Align = alTop
+    Caption = 'This server is VERY UNSAFE. Use it only for firmware provisioning. than STOP IT!'
+    TabOrder = 0
+  end
+  object PanelButtons: TPanel
+    Left = 0
+    Height = 30
+    Top = 0
+    Width = 434
+    Align = alTop
+    Alignment = taLeftJustify
+    BevelOuter = bvNone
+    ClientHeight = 30
+    ClientWidth = 434
+    TabOrder = 1
+    object BitBtnStart: TBitBtn
+      Left = 0
+      Height = 30
+      Top = 0
+      Width = 75
+      Align = alLeft
+      Caption = 'Start'
+      OnClick = BitBtnStartClick
+      TabOrder = 0
+    end
+    object BitBtnStop: TBitBtn
+      Left = 75
+      Height = 30
+      Top = 0
+      Width = 75
+      Align = alLeft
+      Caption = 'Stop'
+      OnClick = BitBtnStopClick
+      TabOrder = 1
+    end
+    object LabeledEditPort: TLabeledEdit
+      Left = 348
+      Height = 21
+      Top = 6
+      Width = 80
+      Anchors = [akTop, akRight]
+      AutoSize = False
+      EditLabel.AnchorSideTop.Control = LabeledEditPort
+      EditLabel.AnchorSideTop.Side = asrCenter
+      EditLabel.AnchorSideRight.Control = LabeledEditPort
+      EditLabel.AnchorSideBottom.Control = LabeledEditPort
+      EditLabel.AnchorSideBottom.Side = asrBottom
+      EditLabel.Left = 321
+      EditLabel.Height = 15
+      EditLabel.Top = 9
+      EditLabel.Width = 22
+      EditLabel.Caption = 'Port'
+      EditLabel.ParentColor = False
+      LabelPosition = lpLeft
+      LabelSpacing = 5
+      TabOrder = 2
+      Text = '80'
+    end
+  end
+  object Memo: TMemo
+    Left = 0
+    Height = 193
+    Top = 47
+    Width = 434
+    Align = alClient
+    ScrollBars = ssAutoBoth
+    TabOrder = 2
+    WordWrap = False
+  end
+end

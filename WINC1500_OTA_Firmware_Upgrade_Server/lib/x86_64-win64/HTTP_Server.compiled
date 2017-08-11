@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.0.2\bin\x86_64-win64\fpc.exe" Date="1247518955"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -WG -l -vewnhibq -FiZ:\documents\projects\05_Adafruit\Adafruit_FeatherM0_ASF_Tutorials\WINC1500_OTA_Firmware_Upgrade_Server\lib\x86_64-win64 -FuZ:\documents\projects\05_Adafruit\Adafruit_FeatherM0_ASF_Tutorials\WINC1500_OTA_Firmware_Upgrade_Server\src -FuC:\lazarus\fpc\3.0.2\source\packages\indylaz -FuC:\lazarus\components\turbopower_ipro\units\x86_64-win64\win32 -FuC:\lazarus\components\printers\lib\x86_64-win64\win32 -FuC:\lazarus\components\cairocanvas\lib\x86_64-win64\win32 -FuC:\lazarus\lcl\units\x86_64-win64\win32 -FuC:\lazarus\lcl\units\x86_64-win64 -FuC:\lazarus\components\lazutils\lib\x86_64-win64 -FuC:\lazarus\packager\units\x86_64-win64 -FuZ:\documents\projects\05_Adafruit\Adafruit_FeatherM0_ASF_Tutorials\WINC1500_OTA_Firmware_Upgrade_Server\ -FUZ:\documents\projects\05_Adafruit\Adafruit_FeatherM0_ASF_Tutorials\WINC1500_OTA_Firmware_Upgrade_Server\lib\x86_64-win64\ -dLCL -dLCLwin32 HTTP_Server.lpr"/>
+</CONFIG>
