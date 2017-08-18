@@ -1,0 +1,19 @@
+-- DIT Adafruit FeatherM0 ASF Turorials - 03_WINC1500 --
+-- Adafruit FeatherM0-WiFi --
+-- Compiled: Jun 11 2017 07:10:42 --
+(APP)(INFO)Chip ID 1503a0
+(APP)(DBG)[nm_spi_init][1250][nmi spi]: chipid (001003a0)
+(APP)(INFO)DriverVerInfo: 0x13521352
+(APP)(DBG)[wait_for_firmware_start][490]13521352 13521352 102
+(APP)(DBG)[wait_for_firmware_start][490]13521352 13521352 102
+(APP)(DBG)[wait_for_firmware_start][490]13521352 13521352 102
+(APP)(DBG)[wait_for_firmware_start][490]13521352 13521352 102
+(APP)(DBG)[wait_for_firmware_start][490]13521352 13521352 102
+(APP)(DBG)[wait_for_firmware_start][490]13521352 13521352 102
+(APP)(INFO)Firmware ver   : 19.4.4 Svnrev 48184
+(APP)(INFO)Firmware Build Nov 19 2015 Time 22:36:45
+(APP)(INFO)Firmware Min driver ver : 19.3.0
+(APP)(INFO)Driver ver: 19.5.2
+(APP)(INFO)Driver built at Jun 11 2017  07:10:39
+(APP)(ERR)[m2m_wifi_init][487]Mismatch Firmawre Version
+main: m2m_wifi_init call error!(-13)

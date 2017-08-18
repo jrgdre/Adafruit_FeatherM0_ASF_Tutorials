@@ -1,0 +1,32 @@
+-- DIT Adafruit FeatherM0 ASF Turorials - WINC1500 OTA Firmware Upgrade --
+-- Adafruit FeatherM0-WiFi --
+-- Compiled: Jun 13 2017 05:53:07 --
+-- Configured SSID: Drechsler --
+-- OTA URL: http://192.168.0.18/winc1500_type_b_ota_19.3.2_asf_3.34_3a0.bin --
+main: nm_bsp_init
+main: m2m_wifi_init
+(APP)(INFO)Chip ID 1503a0
+(APP)(DBG)[nm_spi_init][736][nmi spi]: chipid (001003a0)
+(APP)(DBG)[wait_for_firmware_start][531]ffff0000 ffff0000 2
+(APP)(DBG)[wait_for_firmware_start][531]ffff0000 ffff0000 2
+(APP)(DBG)[wait_for_firmware_start][531]ffff0000 ffff0000 2
+(APP)(DBG)[wait_for_firmware_start][531]ffff0000 ffff0000 2
+(APP)(DBG)[wait_for_firmware_start][531]ffff0000 ffff0000 2
+(APP)(DBG)[wait_for_firmware_start][531]ffff0000 ffff0000 2
+(APP)(INFO)Firmware ver   : 19.4.4
+(APP)(INFO)Min driver ver : 19.3.0
+(APP)(INFO)Curr driver ver: 19.4.4
+main: m2m_ota_init
+main: m2m_wifi_request_scan( all channels )
+wifi_cb: m2m_wifi_req_scan_result( 0 )
+[0] SSID:Drechsler
+Found Drechsler
+wifi_cb: m2m_wifi_connect
+wifi_cb: m2m_wifi_request_dhcp_client
+Wi-Fi connected
+Wi-Fi IP is 192.168.0.14
+wifi_cb: m2m_ota_start_update
+OtaUpdateCb: 1 0
+OtaUpdateCb: m2m_ota_switch_firmware start
+OtaUpdateCb: 2 0
+OtaUpdateCb: OTA Success. Press RESET on your board.

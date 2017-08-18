@@ -1,0 +1,5 @@
+-- DIT Adafruit FeatherM0 ASF Turorials - 03_WINC1500 --
+-- Adafruit FeatherM0-WiFi --
+-- Compiled: Jun 11 2017 06:50:06 --
+(APP)(ERR)[nm_drv_init][295][nmi start]: fail init bus
+main: m2m_wifi_init call error!(-6)

@@ -13,6 +13,8 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "04_RTC", "04_RTC\04_RTC.cpr
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "05_ADC", "05_ADC\05_ADC.cproj", "{0DE8D972-8EFA-4BFB-A191-03EACDCAC086}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "06_WINC1500_SPI_ASF_3.34", "06_WINC1500\06_WINC1500_SPI_ASF_3.34.cproj", "{EA276619-E86B-45B1-A9E5-4CB9B9EFE59F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -39,6 +41,10 @@ Global
 		{0DE8D972-8EFA-4BFB-A191-03EACDCAC086}.Debug|ARM.Build.0 = Debug|ARM
 		{0DE8D972-8EFA-4BFB-A191-03EACDCAC086}.Release|ARM.ActiveCfg = Release|ARM
 		{0DE8D972-8EFA-4BFB-A191-03EACDCAC086}.Release|ARM.Build.0 = Release|ARM
+		{EA276619-E86B-45B1-A9E5-4CB9B9EFE59F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{EA276619-E86B-45B1-A9E5-4CB9B9EFE59F}.Debug|ARM.Build.0 = Debug|ARM
+		{EA276619-E86B-45B1-A9E5-4CB9B9EFE59F}.Release|ARM.ActiveCfg = Release|ARM
+		{EA276619-E86B-45B1-A9E5-4CB9B9EFE59F}.Release|ARM.Build.0 = Release|ARM
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
