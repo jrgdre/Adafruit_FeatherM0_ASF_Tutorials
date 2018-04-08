@@ -249,7 +249,7 @@
       </framework-data>
     </AsfFrameworkConfig>
     <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
-    <avrtoolserialnumber>J41800045024</avrtoolserialnumber>
+    <avrtoolserialnumber>J41800045000</avrtoolserialnumber>
     <avrdeviceexpectedsignature>0x10010305</avrdeviceexpectedsignature>
     <avrtoolinterface>SWD</avrtoolinterface>
     <com_atmel_avrdbg_tool_atmelice>
@@ -260,12 +260,23 @@
         <InterfaceName>SWD</InterfaceName>
       </ToolOptions>
       <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
-      <ToolNumber>J41800045024</ToolNumber>
+      <ToolNumber>J41800045000</ToolNumber>
       <ToolName>Atmel-ICE</ToolName>
     </com_atmel_avrdbg_tool_atmelice>
     <avrtoolinterfaceclock>2000000</avrtoolinterfaceclock>
     <ResetRule>0</ResetRule>
     <EraseKey />
+    <custom>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType xmlns="">custom</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Custom Programming Tool</ToolName>
+    </custom>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -666,9 +677,9 @@
       <SubType>compile</SubType>
       <Link>Font_08px.c</Link>
     </Compile>
-    <Compile Include="..\Framebuffer_1bit.c">
+    <Compile Include="..\Framebuffer_SSD1306.c">
       <SubType>compile</SubType>
-      <Link>Framebuffer_1bit.c</Link>
+      <Link>Framebuffer_SSD1306.c</Link>
     </Compile>
     <Compile Include="..\SSD1306.c">
       <SubType>compile</SubType>

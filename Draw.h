@@ -34,7 +34,8 @@
 #ifndef DRAW_H
 #define DRAW_H
 
-#include <asf.h>	// This is an Atmel Software Foundation implementation
+#include <asf.h>	                // This is an Atmel Software Foundation implementation
+#include "Framebuffer.h"
 
 /**
  *	Implements the midpoint algorithm 
@@ -43,16 +44,15 @@
  *	\see https://en.wikipedia.org/wiki/Midpoint_circle_algorithm
  *
  *	\return Status of operation.
- *	\retval STATUS_OK                   If operation was successfully
- *	\retval STATUS_ERR_INVALID_ARG		If \ref framebuffer_draw_pixel or \ref framebuffer is not assigned
+ *	\retval STATUS_OK               If operation was successfully
+ *	\retval STATUS_ERR_INVALID_ARG  If \ref framebuffer is not assigned
  */
 uint8_t draw_circle(
-      void *framebuffer_draw_pixel	//< pointer to a function that knows how to draw a pixel to the framebuffer
-,     void *framebuffer				//< pointer to the framebuffer to draw the pixel to
-, uint32_t  pixel_value				//< value to set for the pixels
-, uint16_t  x0						//< x start position of the line
-, uint16_t  y0						//< y start position of the line
-, uint16_t  radius					//< radius in pixel to draw circle with
+  struct Framebuffer *framebuffer       //< pointer to the framebuffer to draw the pixel to
+,           uint32_t  pixel_value	//< value to set for the pixels
+,           uint16_t  x0		//< x start position of the line
+,           uint16_t  y0		//< y start position of the line
+,           uint16_t  radius            //< radius in pixel to draw circle with
 );
 
 /**
@@ -61,37 +61,33 @@ uint8_t draw_circle(
  *	\see http://members.chello.at/~easyfilter/bresenham.html
  *
  *	\return Status of operation.
- *	\retval STATUS_OK                   If operation was successfully
- *	\retval STATUS_ERR_INVALID_ARG		If \ref framebuffer_draw_pixel or \ref framebuffer is not assigned
+ *	\retval STATUS_OK               If operation was successfully
+ *	\retval STATUS_ERR_INVALID_ARG	If \ref framebuffer is not assigned
  */
 uint8_t draw_ellipse_rect(
-      void *framebuffer_draw_pixel	//< pointer to a function that knows how to draw a pixel to the framebuffer
-,     void *framebuffer				//< pointer to the framebuffer to draw the pixel to
-, uint32_t  pixel_value				//< value to set for the pixels
-, uint16_t  x0						//< x start position of the enclosing rectangle
-, uint16_t  y0						//< y start position of the enclosing rectangle
-, uint16_t  x1						//< x end   position of the enclosing rectangle
-, uint16_t  y1						//< y end   position of the enclosing rectangle
+  struct Framebuffer *framebuffer       //< pointer to the framebuffer to draw the pixel to
+,           uint32_t  pixel_value	//< value to set for the pixels
+,           uint16_t  x0		//< x start position of the enclosing rectangle
+,           uint16_t  y0		//< y start position of the enclosing rectangle
+,           uint16_t  x1		//< x end   position of the enclosing rectangle
+,           uint16_t  y1		//< y end   position of the enclosing rectangle
 );
 
 /**
- *	Flood fill an area starting from point [x,y] with pixel_new_value
+ *	Flood fill an area starting from point [x,y] with pixel_value_new.
  *
  *	\return Status of operation.
- *	\retval STATUS_OK                   If operation was successfully
- *	\retval STATUS_ERR_INVALID_ARG		If \ref framebuffer_draw_pixel, \ref framebuffer_get_pixel 
- *                                      or \ref framebuffer is not assigned.
- *										Start point [x,y] is out of screen bounds.
- *	\retval STATUS_ERR_NO_MEMORY		If stack could not be allocated.
+ *	\retval STATUS_OK               If operation was successfully
+ *	\retval STATUS_ERR_INVALID_ARG	If \ref framebuffer is not assigned.
+ *					Start point [x,y] is out of screen bounds.
+ *	\retval STATUS_ERR_NO_MEMORY	If stack could not be allocated.
  */
 uint8_t draw_fill(
-      void *framebuffer_draw_pixel	//< pointer to a function that knows how to draw a pixel to the framebuffer
-,     void *framebuffer_get_pixel	//< pointer to a function that knows how to get a pixel value from the framebuffer
-,     void *framebuffer				//< pointer to the framebuffer to draw the pixel to
-, uint32_t  pixel_value				//< current value of pixels to change
-, uint32_t  pixel_value_new			//< new value pixels are set to
-, uint16_t  x						//< x start point
-, uint16_t  y						//< y start point
+  struct Framebuffer *framebuffer	//< pointer to the framebuffer to draw the pixel to
+,           uint32_t  pixel_value	//< current value of pixels to change
+,           uint32_t  pixel_value_new   //< new value pixels are set to
+,           uint16_t  x			//< x start point
+,           uint16_t  y			//< y start point
 );
 
 /**
@@ -101,17 +97,16 @@ uint8_t draw_fill(
  *	\see http://members.chello.at/~easyfilter/bresenham.html
  *
  *	\return Status of operation.
- *	\retval STATUS_OK                   If operation was successfully
- *	\retval STATUS_ERR_INVALID_ARG		If \ref framebuffer_draw_pixel or \ref framebuffer is not assigned
+ *	\retval STATUS_OK               If operation was successfully
+ *	\retval STATUS_ERR_INVALID_ARG	If \ref framebuffer is not assigned
  */
 uint8_t draw_line(
-      void *framebuffer_draw_pixel	//< pointer to a function that knows how to draw a pixel to the framebuffer
-,     void *framebuffer				//< pointer to the framebuffer to draw the pixel to
-, uint32_t  pixel_value				//< value to set for the pixels
-, uint16_t  x0						//< x start position of the line
-, uint16_t  y0						//< y start position of the line
-, uint16_t  x1						//< x end   position of the line
-, uint16_t  y1						//< y end   position of the line
+  struct Framebuffer *framebuffer       //< pointer to the framebuffer to draw the pixel to
+,           uint32_t  pixel_value	//< value to set for the pixels
+,           uint16_t  x0		//< x start position of the line
+,           uint16_t  y0		//< y start position of the line
+,           uint16_t  x1		//< x end   position of the line
+,           uint16_t  y1		//< y end   position of the line
 );
 
 /**
@@ -119,17 +114,16 @@ uint8_t draw_line(
  *	using \ref draw_line.
  *
  *	\return Status of operation.
- *	\retval STATUS_OK                   If operation was successfully
- *	\retval STATUS_ERR_INVALID_ARG		If \ref framebuffer_draw_pixel or \ref framebuffer is not assigned
+ *	\retval STATUS_OK               If operation was successfully
+ *	\retval STATUS_ERR_INVALID_ARG	If \ref framebuffer is not assigned
  */
 uint8_t draw_rect(
-      void *framebuffer_draw_pixel	//< pointer to a function that knows how to draw a pixel to the framebuffer
-,     void *framebuffer				//< pointer to the framebuffer to draw the pixel to
-, uint32_t  pixel_value				//< value to set for the pixels
-, uint16_t  x0						//< x start position of the line
-, uint16_t  y0						//< y start position of the line
-, uint16_t  x1						//< x end   position of the line
-, uint16_t  y1						//< y end   position of the line
+  struct Framebuffer *framebuffer       //< pointer to the framebuffer to draw the pixel to
+,           uint32_t  pixel_value	//< value to set for the pixels
+,           uint16_t  x0		//< x start position of the line
+,           uint16_t  y0		//< y start position of the line
+,           uint16_t  x1		//< x end   position of the line
+,           uint16_t  y1		//< y end   position of the line
 );
 
 #endif
