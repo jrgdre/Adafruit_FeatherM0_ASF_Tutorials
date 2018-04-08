@@ -19,6 +19,8 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "07_I2C_SSD1306_FeatherWing_
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3FEAF5F1-D974-4438-AE87-BF8584761655}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "08_I2C_SSD1306_64_lines_OLED", "08_I2C_SSD1306_64_lines\08_I2C_SSD1306_64_lines_OLED.cproj", "{C2CE7B1B-8AE4-4089-80FC-68F044E30791}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -53,6 +55,10 @@ Global
 		{EF9394FB-3787-461D-BB30-5A029786FAAB}.Debug|ARM.Build.0 = Debug|ARM
 		{EF9394FB-3787-461D-BB30-5A029786FAAB}.Release|ARM.ActiveCfg = Release|ARM
 		{EF9394FB-3787-461D-BB30-5A029786FAAB}.Release|ARM.Build.0 = Release|ARM
+		{C2CE7B1B-8AE4-4089-80FC-68F044E30791}.Debug|ARM.ActiveCfg = Debug|ARM
+		{C2CE7B1B-8AE4-4089-80FC-68F044E30791}.Debug|ARM.Build.0 = Debug|ARM
+		{C2CE7B1B-8AE4-4089-80FC-68F044E30791}.Release|ARM.ActiveCfg = Release|ARM
+		{C2CE7B1B-8AE4-4089-80FC-68F044E30791}.Release|ARM.Build.0 = Release|ARM
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
